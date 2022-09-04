@@ -42,7 +42,7 @@ nav{
 	margin: 0;
 	padding: 0;
 	display: flex;
-	justify-content: space-between;
+	
 	cursor: pointer;
 	
 	
@@ -178,7 +178,9 @@ h1{
 	transform: rotate(180deg);
 }
 
-
+.desktop-navbar {
+    flex-grow: 1;
+}
 
 @media (max-width:995px){
 	.main-content{
@@ -327,6 +329,9 @@ h1{
 	
 }
 
+.dropdown-content a img{
+	padding: 25px;
+}
 
 .dropdownBtn:hover img{
 	transform: rotate(180deg);
@@ -339,7 +344,9 @@ h1{
 	}
 	#mobile-btn button:nth-child(2){
 		width: 140px;
-		margin-left:60px ;	
-		margin-right: 20px;
+		margin-left:auto;	
+		margin-right: auto;
 	}
+
+
 } 
