@@ -1,0 +1,345 @@
+/* 
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Neutral
+
+- Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
+- Weights: 500, 700 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	background-color: hsl(0, 0%, 98%);
+}
+.overlay{
+	display: none;
+}
+.menu-icon
+{
+	display: none;
+}
+
+nav{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	
+	
+}
+.desktop-navbar{
+	display: flex;
+
+	
+}
+.desktop-navbar a,.desktop-navbar .dropdownBtn{
+	padding-right: 20px;
+	padding-left: 20px;	
+}
+
+a{
+	margin: 10px;
+	text-decoration: none;
+	color:hsl(0, 0%, 41%);
+}
+a:hover{
+	color: hsl(0, 0%, 8%);
+}
+
+
+.dropdownBtn:hover,.dropdown-content:hover{
+	color: hsl(0, 0%, 8%);
+}
+
+.menu-btn button:nth-child(1){
+	color: hsl(0, 0%, 41%);
+	border:none;
+	outline: none;
+	background-color: transparent;
+
+}
+.menu-btn button:nth-child(1):hover{
+	color: hsl(0, 0%, 8%);
+}
+.menu-btn button:nth-child(2){
+	border: 1px hsl(0, 0%, 41%) solid;
+	border-radius: 10px;
+	background-color: transparent;
+	color: hsl(0, 0%, 41%);
+	padding: 10px 25px;
+}
+.menu-btn button:nth-child(2):hover{
+	border: 1px hsl(0, 0%, 8%) solid;
+	color:hsl(0, 0%, 8%) ;
+}
+.menu-btn button{
+cursor: pointer;
+}
+
+h1{
+	font-size: 70px;
+	white-space: 400px;
+}
+.text{
+	font-size: 18px;
+}
+.main-content{
+	display: grid;
+	grid-template-columns: repeat(2,450px);
+	grid-gap: 80px;
+	max-width: 1440px;
+	justify-content: center;
+	vertical-align: middle;
+	align-items: center;
+	margin: 0 auto;
+}
+#main-img img{
+	width: 100%;
+}
+.logo img{
+	margin-left: 0;
+}
+.client-logos{
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.main-btn{
+	border: 1px hsl(0, 0%, 8%) solid;
+	background-color: hsl(0, 0%, 8%);
+	color: hsl(0, 0%, 98%);
+	padding: 10px;
+	border-radius: 10px;
+}
+.main-btn:hover{
+	border: 1px hsl(0, 0%, 8%) solid;
+	background-color:hsl(0, 0%, 98%) ;
+	color:hsl(0, 0%, 8%) ;
+	font-size: 14px;
+	transition:  4s;
+	cursor: pointer;
+}
+
+.dropdown{
+	margin: 10px;
+	color: hsl(0, 0%, 41%);
+	position: relative;
+	display: inline-block;
+	
+	
+}
+.dropdown-content{
+	position: absolute;
+	background-color: hsl(0, 0%, 98%);
+	border: 1px  hsl(0, 0%, 41%) solid;
+	border-radius: 10px;
+	box-shadow: 12px 16px 86px 0px rgba(0,0,0,0.29);
+	-webkit-box-shadow: 12px 16px 86px 0px rgba(0,0,0,0.32);
+	-moz-box-shadow: 12px 16px 86px 0px rgba(0,0,0,0.29);
+	width: 140px;
+	z-index: 2;
+	display: none;
+}
+.dropdown-content a{
+	display: flex;
+	padding: 10px;
+	text-align: center;
+	margin: 0;
+	justify-content: space-around;
+	
+}
+
+.dropdown:hover .dropdown-content{
+	display:block ;
+	transition: all 0.2s;
+}
+.dropdownBtn:hover img{
+	transform: rotate(180deg);
+}
+
+
+
+@media (max-width:995px){
+	.main-content{
+		max-width:700px ;
+		grid-template-columns: repeat(2,320px);
+		grid-gap: 30px;
+	}
+	.client-logos img{
+		justify-content: space-around;
+		padding: 5px;
+	}
+}
+
+@media (max-width:745px){
+	.desktop-navbar{
+		display: none;
+	}
+	div.menu-btn{
+		display: none;
+	}
+	#mobile-btn {
+	display: contents;
+	padding: 10px;
+			}
+	#mobile-btn button{
+		padding: 10px;
+	}
+	.overlay{
+		text-align: right;
+		position: absolute;
+		right:0px;
+		top: 0;
+		bottom: 0;
+		display: none;
+		width: 200%;
+		height: 402.5vh;
+		background-color: rgba(0,0,0,0.72);
+	}
+	.menu-icon{
+		display: block;
+		align-items: center;
+		margin: auto 0;
+	}
+	.main-content{
+		
+		max-width: 550px;
+		grid-template-columns: repeat(1,max(200px,300px));
+	}
+	#main-img{
+		grid-row: 1;
+		content: url("images/image-hero-mobile.png");
+		width: 100%;
+		margin: 30px;
+		justify-content: center;
+
+	}
+	h1{
+		font-size: 25px;
+	}
+	.text{
+		font-size: 14px;
+		width: 70%;
+	}
+	.text,h1{
+		text-align: center;
+		margin-left: auto ;
+		margin-right: auto;
+	}
+	br{
+		display: none;
+	}
+	.mobile-navbar{
+		
+		text-align: right;
+		justify-content: flex-start;
+		width: 25%;
+		height: 400vh;
+		position: absolute;
+		right:0px;
+		background-color: hsl(0, 0%, 98%);
+	}
+	.mobile-navbar  ,.mobile-container {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		padding: 10px;
+		
+	}
+	.dropdownBtn{
+		padding: 20px;
+		padding-top: 40px;
+	}
+	.mobile-navbar a{
+		padding: 40px;
+	}
+	.mobile-container{
+		padding: 5px;
+	}
+	.client-logos img{
+		margin-left: auto ;
+		margin-right: auto;
+		padding: 5px;
+		width: 40%;
+	}
+	
+	.show{
+	display: flex;
+}
+.hide{
+	display: none;
+}
+.dropdown{
+	margin: 0px;
+	
+	color: hsl(0, 0%, 41%);
+	position: relative;
+	display: inline-block;
+	
+	
+}
+.mobile-navbar a{
+	margin: 0;
+	text-align: left;
+}
+.dropdown-content{
+	position: absolute;
+	background-color: hsl(0, 0%, 98%);
+	border: none;
+	outline: none;
+	border-radius: 0px;
+	box-shadow: 12px 16px 86px 0px rgba(0,0,0,0);
+	-webkit-box-shadow: 12px 16px 86px 0px rgba(0,0,0,0);
+	-moz-box-shadow: 12px 16px 86px 0px rgba(0,0,0,0);
+	width: 100px;
+	left: 0;
+	top: 60px;
+	
+	display: none;
+}
+.dropdown-content a{
+	display: flex;
+	padding:5px;
+	text-align: right;
+	margin: 0;
+	justify-content: space-around;
+	
+}
+
+
+.dropdownBtn:hover img{
+	transform: rotate(180deg);
+}
+
+	#mobile-btn button{
+		margin-left: auto;
+		margin-right: 30%;
+		align-content: center;
+	}
+	#mobile-btn button:nth-child(2){
+		width: 140px;
+		margin-left:60px ;	
+		margin-right: 20px;
+	}
+} 
